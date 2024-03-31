@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'djoser',
     # Local apps
     'accounts.apps.AccountsConfig',
+    'onboarding.apps.OnboardingConfig',
 ]
 
 MIDDLEWARE = [
@@ -253,3 +254,6 @@ DJOSER = {
         'resend_activation': ['rest_framework.permissions.IsAdminUser'],
     },
 }
+
+# Company Abbrreviation
+COMPANY_ABBR = 'RBS'
