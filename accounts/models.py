@@ -3,6 +3,7 @@ from django.utils import timezone
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.utils.translation import gettext_lazy as _
 from .managers import UserManager
+from templated_email import get_templated_mail
 
 
 class User(AbstractBaseUser, PermissionsMixin):
@@ -30,6 +31,14 @@ class User(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.email
 
-    def email_user(self, subject, message, from_email=None, **kwargs):
-        """Send an email to this user."""
-        send_mail(subject, message, from_email, [self.email], **kwargs)
+    def send_mail(self, email_template, sender, context):
+        "Sends an email invitation to the employee User."
+        context['employee_name'] = self.employee.get_short_name() 
+
+        invite_email = get_templated_mail(
+            template_name=email_template,
+            from_email=sender,
+            to=[self.email],
+            context=context
+        )
+        return invite_email.send()

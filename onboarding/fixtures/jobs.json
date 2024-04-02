@@ -1,0 +1,272 @@
+[
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Chief Executive Officer",
+      "description": "The CEO is the highest-ranking executive responsible for overall strategic direction, decision-making, and ensuring the company's success.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Chief Financial Officer",
+      "description": "The CFO oversees financial operations, budgeting, financial planning, and risk management.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Chief Operating Officer",
+      "description": "The COO manages day-to-day operations, process efficiency, and resource allocation.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Human Resources Manager",
+      "description": "HR managers handle recruitment, employee relations, benefits, and compliance.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Marketing Director",
+      "description": "Marketing directors create and execute marketing strategies to promote products or services.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Sales Manager",
+      "description": "Sales managers lead sales teams, set targets, and drive revenue growth.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "IT Director",
+      "description": "IT directors oversee technology infrastructure, software development, and cybersecurity.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Operations Manager",
+      "description": "Operations managers optimize processes, manage resources, and ensure smooth workflows.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Financial Analyst",
+      "description": "Financial analysts analyze financial data, prepare reports, and provide insights for decision-making.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Project Manager",
+      "description": "Project managers plan, execute, and monitor projects to achieve specific goals.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Supply Chain Manager",
+      "description": "Supply chain managers coordinate logistics, procurement, and inventory management.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Business Development Specialist",
+      "description": "Business development specialists identify growth opportunities and build partnerships.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Quality Assurance Analyst",
+      "description": "QA analysts test products or services to ensure they meet quality standards.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Data Analyst",
+      "description": "Data analysts collect, analyze, and interpret data to inform business decisions.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Customer Service Manager",
+      "description": "Customer service managers handle customer inquiries, complaints, and team supervision.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Legal Counsel",
+      "description": "Legal counsels provide legal advice, draft contracts, and handle compliance matters.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Risk Manager",
+      "description": "Risk managers assess and mitigate potential risks to the organization.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Corporate Communications Specialist",
+      "description": "Communications specialists manage internal and external communication strategies.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Product Manager",
+      "description": "Product managers oversee product development, launch, and lifecycle management.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Business Analyst",
+      "description": "Business analysts analyze processes, identify improvements, and recommend solutions.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Facilities Manager",
+      "description": "Facilities managers handle office space, maintenance, and safety.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Training and Development Specialist",
+      "description": "Training specialists design and deliver employee training programs.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Public Relations Manager",
+      "description": "PR managers manage the company's public image, media relations, and crisis communication.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Environmental Health and Safety Officer",
+      "description": "EHS officers ensure compliance with safety regulations and promote a healthy work environment.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Business Process Analyst",
+      "description": "Process analysts optimize workflows and streamline business processes.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Talent Acquisition Specialist",
+      "description": "Talent acquisition specialists recruit and onboard new employees.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Compliance Officer",
+      "description": "Compliance officers ensure adherence to legal and regulatory requirements.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Brand Manager",
+      "description": "Brand managers develop and maintain the company's brand identity and reputation.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },  
+  {
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Internal Auditor",
+      "description": "Internal auditors review financial records and internal controls for accuracy and compliance.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },
+  { 
+    "model": "onboarding.job",
+    "fields": {
+      "title": "Change Management Consultant",
+      "description": "Change management consultants guide organizational changes and transitions.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  }
+]

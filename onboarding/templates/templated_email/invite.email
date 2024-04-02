@@ -1,0 +1,39 @@
+{% load i18n %}
+{% block subject %}
+{% blocktrans %}Welcome to the {{site_name}} Portal!{% endblocktrans %}
+{% endblock %}
+
+{% block plain %}
+    Hi {{employee_name}},
+
+    We're excited to welcome you to the team! This email provides you with access to our secure Employee Portal, a one-stop shop for everything you'll need to thrive at {{site_name}}.
+
+    **What is the Employee Portal?**
+
+    The Employee Portal is your personalized hub for company information, resources, and tools. Here, you can:
+
+    * Access important company documents and policies
+    * View and update your personal information
+    * Manage benefits and payroll details
+    * Stay connected with company news and announcements
+    * And much more!
+
+    **Getting Started:**
+
+    To set up your account and explore the portal, simply click the link below:
+
+    {{ protocol }}://{{ domain }}/{{ url|safe }}
+
+    **Please note:** This link is unique to you and will expire in [Number] days. 
+
+    **Need Help?**
+
+    If you encounter any issues accessing the portal, please don't hesitate to contact the IT Help Desk at [IT Help Desk Contact Information] or [HR Contact Information] for HR-related questions.
+
+    We look forward to seeing you around the portal!
+
+    Best regards,
+
+    The {{site_name}} Team
+
+{% endblock %}

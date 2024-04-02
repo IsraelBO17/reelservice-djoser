@@ -1,0 +1,102 @@
+[
+  {
+    "model": "onboarding.department",
+    "fields": {
+      "name": "Administrative",
+      "code": "ADM",
+      "description": "Responsible for managing office tasks and systems to maximize efficiency, including databases, office equipment, and records management.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "onboarding.department",
+    "fields": {
+      "name": "Human Resources",
+      "code": "HR",
+      "description": "Manages employment-related tasks, team engagement, recruitment, benefits, and employee concerns.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "onboarding.department",
+    "fields": {
+      "name": "Operations/Delivery",
+      "code": "OPS",
+      "description": "Handles day-to-day activities related to production and distribution of products or services, resource coordination, and logistics.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "onboarding.department",
+    "fields": {
+      "name": "Product/Service Development",
+      "code": "PSD",
+      "description": "Focuses on creating new and existing offerings for sale, conducting research, designing, and overseeing production.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "onboarding.department",
+    "fields": {
+      "name": "Purchasing",
+      "code": "PUR",
+      "description": "Procures goods and services, negotiates prices, maintains vendor relationships, and ensures compliance with policies.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "onboarding.department",
+    "fields": {
+      "name": "Sales",
+      "code": "SAL",
+      "description": "Converts prospects into clients or customers, conducts market research, pitches sales, and collaborates with other departments.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "onboarding.department",
+    "fields": {
+      "name": "Marketing",
+      "code": "MKT",
+      "description": "Generates leads for the sales team, develops effective strategies, and ensures products or services meet customer needs.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "onboarding.department",
+    "fields": {
+      "name": "Accounting",
+      "code": "ACC",
+      "description": "Manages financial records, transactions, budgeting, and reporting.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "onboarding.department",
+    "fields": {
+      "name": "Information Technology",
+      "code": "IT",
+      "description": "Handles technology infrastructure, software development, cybersecurity, and network management.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  },
+  {
+    "model": "onboarding.department",
+    "fields": {
+      "name": "Research and Development",
+      "code": "R&D",
+      "description": "Innovates, conducts research, and develops new products or technologies.",
+      "created_at": "2024-02-10",
+      "updated_at": "2024-02-10"
+    }
+  }   
+]

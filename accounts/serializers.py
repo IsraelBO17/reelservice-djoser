@@ -27,4 +27,11 @@ class UserSerializer(DjoserUserSerializer):
     class Meta:
         model = User
         fields = ['id','email','groups','is_active']
-        read_only_fields = ['groups','is_active']
+        read_only_fields = ['is_active']
+
+class CreateEmployeeUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['email',]
+
+        
