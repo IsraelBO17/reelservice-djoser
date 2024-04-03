@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os, environ
 from pathlib import Path
 from django.core.management.utils import get_random_secret_key
-
+import dj_database_url
 
 env = environ.Env(
     # set casting, default value
@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', get_random_secret_key())
 # False if not in os.environ because of casting above
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = [".awsapprunner.com"]
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(' ')
 
 
 # Application definition
@@ -101,7 +101,13 @@ DATABASES = {
         'PASSWORD': os.environ.get('DATABASE_PASSWORD', 'password'),
         'HOST': os.environ.get('DATABASE_HOST', 'localhost'),
         'PORT': os.environ.get('DATABASE_PORT', '5432'),
-    }
+    },
+    # 'default': dj_database_url.config(
+    #     # Replace this value with your local database's connection string.
+    #     default='postgresql://postgres:postgres@localhost:5432/mysite',
+    #     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'), conn_max_age=600),
+    #     conn_max_age=600
+    # )
 }
 
 
