@@ -7,18 +7,18 @@ from djoser.serializers import (
 
 User = get_user_model()
 
-class CreateUserSerializer(DjoserUserCreateSerializer):
-    groups = serializers.SlugRelatedField(
-        many=True,
-        read_only=True,
-        slug_field='name'
-     )
-    class Meta:
-        model = User
-        fields = ['id','email','password','groups','is_active']
-        read_only_fields = ['is_active']
+# class CreateUserSerializer(DjoserUserCreateSerializer):
+#     groups = serializers.SlugRelatedField(
+#         many=True,
+#         read_only=True,
+#         slug_field='name'
+#      )
+#     class Meta:
+#         model = User
+#         fields = ['id','email','password','groups','is_active']
+#         read_only_fields = ['is_active']
     
-class UserSerializer(DjoserUserSerializer):
+class CustomUserSerializer(DjoserUserSerializer):
     groups = serializers.SlugRelatedField(
         many=True,
         read_only=True,
@@ -26,7 +26,7 @@ class UserSerializer(DjoserUserSerializer):
      )
     class Meta:
         model = User
-        fields = ['id','email','groups','is_active']
+        fields = ['id','groups','is_active']
         read_only_fields = ['is_active']
 
 class CreateEmployeeUserSerializer(serializers.ModelSerializer):

@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import action
 from .models import Employee, Job, Department, EmployeeType
 from .serializers import EmployeeSerializer, CreateEmployeeSerializer, JobSerializer, DepartmentSerializer, EmployeeTypeSerializer, SendInviteSerializer
-from .signals import employee_created
+from .signals import send_invite_mail
 from accounts.permissions import IsHRorAdmin, IsEmployeeorAdmin
 
 
@@ -29,9 +29,16 @@ class EmployeeViewSet(viewsets.ModelViewSet):
             
         return self.serializer_class
 
-
     def perform_destroy(self, instance):
-        instance.save(is_active=False)
+        instance.deactivate_employee()
+
+
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        if instance.user == request.user:
+            utils.logout_user(self.request)
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
     @action(detail=False, methods=["get"])
@@ -54,7 +61,7 @@ class EmployeeViewSet(viewsets.ModelViewSet):
         user = serializer.get_user()
 
         if not user.is_active:
-            response = employee_created.send(sender=self.__class__, user=user, request=self.request)
+            response = send_invite_mail.send(sender=self.__class__, user=user, request=self.request)
             if response:
                 return Response(data={'message':'Invitation successfully sent'}, status=status.HTTP_200_OK)
             else:

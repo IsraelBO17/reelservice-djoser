@@ -7,8 +7,14 @@ pip install -r requirements.txt
 # Convert static asset files
 python manage.py collectstatic --no-input
 
+# Run database migrations
+python manage.py makemigrations
+
 # Apply any outstanding database migrations
 python manage.py migrate
 
 # Create superuser 
 python manage.py createsu
+
+# Create groups
+python manage.py creategroups

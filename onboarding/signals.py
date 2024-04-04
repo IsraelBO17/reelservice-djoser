@@ -4,10 +4,10 @@ from django.contrib.auth.tokens import default_token_generator
 from .utils import encode_uid
 
 # New employee has been created.
-employee_created = Signal()
+send_invite_mail = Signal()
 
 
-@receiver(employee_created)
+@receiver(send_invite_mail)
 def send_invitation_mail(sender, user, request, **kwargs):
     uid = encode_uid(user.pk)
     token = default_token_generator.make_token(user)

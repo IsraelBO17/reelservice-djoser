@@ -2,26 +2,23 @@ from django.contrib.auth import get_user_model
 from django.conf import settings
 from rest_framework import serializers
 from .models import Employee, Job, Department, EmployeeType
-from .signals import employee_created
-from accounts.serializers import UserSerializer, CreateEmployeeUserSerializer
+from .signals import send_invite_mail
+from accounts.serializers import CustomUserSerializer, CreateEmployeeUserSerializer
 
 
 User = get_user_model()
 
 class EmployeeSerializer(serializers.ModelSerializer):
-    user = UserSerializer(read_only=True)
+    user = CustomUserSerializer(read_only=True)
     job = serializers.SlugRelatedField(queryset=Job.objects.all(), slug_field="title")
     department = serializers.SlugRelatedField(queryset=Department.objects.all(), slug_field="code")
     employee_type = serializers.SlugRelatedField(queryset=EmployeeType.objects.all(), slug_field="code")
-    employee_number = serializers.SerializerMethodField()
     
     class Meta:
         model = Employee
         fields = '__all__'
         read_only_fields = ['resignation_date','is_leave','is_active','created_at','updated_at']
     
-    def get_employee_number(self, obj):
-        return obj.employee_number
 
 
 class CreateEmployeeSerializer(EmployeeSerializer):
@@ -42,10 +39,10 @@ class CreateEmployeeSerializer(EmployeeSerializer):
             user = User.objects.create_employee_user(**user_data)
             employee = Employee.objects.create(user=user, **validated_data)
         except Exception as exc:
-            raise exc
+            return exc
 
         if send_invite:
-            employee_created.send(
+            send_invite_mail.send(
                 sender=self.__class__, user=user, request=request,
             )
         return employee
