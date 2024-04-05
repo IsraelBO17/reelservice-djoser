@@ -1,5 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.conf import settings
+from datetime import date
+from django.utils.translation import gettext_lazy as _
 from rest_framework import serializers
 from .models import Employee, Job, Department, EmployeeType
 from .signals import send_invite_mail
@@ -47,6 +49,21 @@ class CreateEmployeeSerializer(EmployeeSerializer):
             )
         return employee
 
+class DeleteEmployeeSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    resignation_date = serializers.DateField(default=date.today())
+
+    default_error_messages = {
+        "invalid_email": _("User with given email does not exist.")
+    }
+
+    def validate_email(self, value):
+        is_email_valid = self.instance.user.email == value
+        if is_email_valid:
+            return value
+        else:
+            self.fail("invalid_email")
+
 
 class JobSerializer(serializers.ModelSerializer):
     class Meta:
@@ -56,7 +73,7 @@ class JobSerializer(serializers.ModelSerializer):
 
 
 class DepartmentSerializer(serializers.ModelSerializer):
-    head = serializers.SlugRelatedField(queryset=Employee.objects.all(), slug_field="employee_number")
+    head = serializers.SlugRelatedField(queryset=Employee.objects.all(), slug_field="employee_number", allow_null=True)
     class Meta:
         model = Department
         fields = '__all__'

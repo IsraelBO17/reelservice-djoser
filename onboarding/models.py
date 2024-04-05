@@ -121,11 +121,10 @@ class Employee(models.Model):
         "Returns the employee's full name."
         return f'{self.first_name} {self.middle_name} {self.last_name}'
 
-    def deactivate_employee(self, resignation_date=date.today()):
+    def deactivate_employee(self, resignation_date):
         """Deactivates an employee."""
         self.resignation_date = resignation_date
         self.is_active = False
-        self.user.is_active = False
         self.save()
         return self.is_active
     

@@ -35,10 +35,10 @@ class User(AbstractBaseUser, PermissionsMixin):
         "Sends an email invitation to the employee User."
         context['employee_name'] = self.employee.get_short_name() 
 
-        invite_email = get_templated_mail(
+        mail = get_templated_mail(
             template_name=email_template,
             from_email=sender,
             to=[self.email],
             context=context
         )
-        return invite_email.send()
+        return mail.send()

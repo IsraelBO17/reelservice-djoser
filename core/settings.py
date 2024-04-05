@@ -203,7 +203,7 @@ REST_FRAMEWORK = {
 
 # djangorestframework-simplejwt settings
 SIMPLE_JWT = {
-   'AUTH_HEADER_TYPES': ('JWT',),
+    'AUTH_HEADER_TYPES': ('JWT',),
     'UPDATE_LAST_LOGIN': True,
 }
 
@@ -218,6 +218,7 @@ DJOSER = {
     "SERIALIZERS": {
         # 'user_create': 'accounts.serializers.CreateUserSerializer',
         # 'user': 'accounts.serializers.UserSerializer',
+        'password_reset': 'accounts.serializers.PasswordResetSerializer',
     },
     "PERMISSIONS": {
         'user_create': ['rest_framework.permissions.IsAdminUser'],

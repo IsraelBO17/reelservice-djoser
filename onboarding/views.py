@@ -29,15 +29,19 @@ class EmployeeViewSet(viewsets.ModelViewSet):
             
         return self.serializer_class
 
-    def perform_destroy(self, instance):
-        instance.deactivate_employee()
-
+    def perform_destroy(self, instance, resignation_date):
+        instance.deactivate_employee(resignation_date)
+        
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
+        serializer = self.get_serializer(instance, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        resignation_date = serializer.validated_data.get('resignation_date')
+
         if instance.user == request.user:
             utils.logout_user(self.request)
-        self.perform_destroy(instance)
+        self.perform_destroy(instance, resignation_date)
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
