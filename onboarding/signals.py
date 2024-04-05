@@ -26,6 +26,7 @@ def send_invitation_mail(sender, user, request, **kwargs):
 
 @receiver(deactivate_employee_user)
 def deactivate_employee_user(sender, user, **kwargs):
-    pass
+    user.is_active = False
+    user.save()
 
 

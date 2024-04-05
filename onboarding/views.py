@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import action
 from .models import Employee, Job, Department, EmployeeType
 from .serializers import EmployeeSerializer, CreateEmployeeSerializer, JobSerializer, DepartmentSerializer, EmployeeTypeSerializer, SendInviteSerializer
-from .signals import send_invite_mail
+from .signals import send_invite_mail, deactivate_employee_user
 from accounts.permissions import IsHRorAdmin, IsEmployeeorAdmin
 
 
@@ -31,7 +31,7 @@ class EmployeeViewSet(viewsets.ModelViewSet):
 
     def perform_destroy(self, instance, resignation_date):
         instance.deactivate_employee(resignation_date)
-        
+        deactivate_employee_user.send(sender=self.__class__, user=instance.user) 
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
